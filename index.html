@@ -6,77 +6,106 @@
 
 <style>
 
-body{
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-margin:0;
-background:#f8f8fb;
-color:#333;
-line-height:1.7;
+html{
 scroll-behavior:smooth;
 }
+
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+background:#0f0f14;
+color:#eee;
+line-height:1.7;
+}
+
+/* hero */
+
+.hero{
+text-align:center;
+padding:60px 20px 40px;
+}
+
+.hero img{
+max-width:420px;
+width:90%;
+margin-bottom:20px;
+}
+
+.subtitle{
+color:#bbb;
+font-size:18px;
+}
+
+/* container */
 
 .container{
 max-width:900px;
 margin:auto;
-padding:40px 20px;
+padding:30px 20px 60px;
 }
 
-h1{
-text-align:center;
-margin-bottom:10px;
-}
-
-.subtitle{
-text-align:center;
-margin-bottom:40px;
-color:#666;
-}
+/* song list */
 
 .song-list{
-background:white;
-border-radius:10px;
-padding:20px;
-box-shadow:0 3px 10px rgba(0,0,0,0.05);
+background:#181820;
+padding:25px;
+border-radius:14px;
 margin-bottom:50px;
 }
 
-.song-list a{
-display:block;
-padding:8px 0;
-text-decoration:none;
-color:#444;
-border-bottom:1px solid #eee;
+.song-list h2{
+margin-top:0;
 }
 
-.song-list a:hover{
-color:#6a7cff;
+.song-grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+gap:10px;
 }
+
+.song-grid a{
+background:#22222c;
+padding:10px;
+border-radius:8px;
+text-decoration:none;
+color:#eee;
+transition:.2s;
+}
+
+.song-grid a:hover{
+background:#35354a;
+transform:translateY(-2px);
+}
+
+/* cards */
 
 .song-card{
-background:white;
+background:#181820;
 padding:25px;
-border-radius:10px;
-margin-bottom:30px;
-box-shadow:0 3px 12px rgba(0,0,0,0.05);
+border-radius:14px;
+margin-bottom:40px;
+opacity:0;
+transform:translateY(20px);
+animation:fadeUp .6s forwards;
 }
 
 .song-title{
 font-size:20px;
 font-weight:bold;
-margin-bottom:10px;
 }
 
 .comment{
-background:#f3f4ff;
+background:#22222c;
 padding:15px;
-border-radius:6px;
+border-radius:8px;
 margin-top:15px;
+color:#ddd;
 }
 
 iframe{
-margin-top:15px;
 width:100%;
 height:315px;
+margin-top:15px;
 border:none;
 }
 
@@ -86,32 +115,61 @@ margin-top:10px;
 }
 
 .back a{
-font-size:14px;
-color:#888;
+color:#aaa;
 text-decoration:none;
+font-size:14px;
+}
+
+@keyframes fadeUp{
+
+to{
+opacity:1;
+transform:none;
+}
+
 }
 
 </style>
 </head>
 
-<body>
+
+<body id="top">
+
+<div class="hero">
+
+<img src="logo.png">
+
+<div class="subtitle">
+健啓Webオンリー<br>
+イメージソング企画 発表
+</div>
+
+</div>
+
 
 <div class="container">
 
-<h1>健啓Webオンリー</h1>
-<p class="subtitle">イメージソング企画 発表</p>
-
 <div class="song-list">
 
-<b>🎧 曲一覧</b>
+<h2>🎧 曲一覧</h2>
+
+<div class="song-grid">
 
 <a href="#s1">01 曲名</a>
 <a href="#s2">02 曲名</a>
 <a href="#s3">03 曲名</a>
 <a href="#s4">04 曲名</a>
 <a href="#s5">05 曲名</a>
+<a href="#s6">06 曲名</a>
+<a href="#s7">07 曲名</a>
+<a href="#s8">08 曲名</a>
+<a href="#s9">09 曲名</a>
+<a href="#s10">10 曲名</a>
 
 </div>
+
+</div>
+
 
 
 <div class="song-card" id="s1">
@@ -121,8 +179,10 @@ text-decoration:none;
 <iframe src="https://www.youtube.com/embed/動画ID"></iframe>
 
 <div class="comment">
+
 💬 コメント  
-ここに募集コメントを書きます。
+ここに募集コメントを掲載
+
 </div>
 
 <div class="back">
@@ -132,6 +192,7 @@ text-decoration:none;
 </div>
 
 
+
 <div class="song-card" id="s2">
 
 <div class="song-title">02 曲名</div>
@@ -139,8 +200,7 @@ text-decoration:none;
 <iframe src="https://www.youtube.com/embed/動画ID"></iframe>
 
 <div class="comment">
-💬 コメント  
-ここにコメント
+💬 コメント
 </div>
 
 </div>
@@ -153,8 +213,7 @@ text-decoration:none;
 <iframe src="https://www.youtube.com/embed/動画ID"></iframe>
 
 <div class="comment">
-💬 コメント  
-ここにコメント
+💬 コメント
 </div>
 
 </div>
