@@ -17,28 +17,40 @@ color:white;
 line-height:1.7;
 
 background:
-radial-gradient(circle at 20% 20%,#2a2d55 0%,transparent 40%),
-radial-gradient(circle at 80% 30%,#3c4a8c 0%,transparent 40%),
-linear-gradient(#0b0c1a,#111432 70%);
+radial-gradient(circle at 20% 20%,#4a4a5e 0%,transparent 40%),
+linear-gradient(#2b2b34,#14141b);
 }
 
-/* hero */
+
+/* header banner */
 
 .hero{
-text-align:center;
-padding:80px 20px 40px;
+
+width:100%;
+height:340px;
+
+background-image:url("header.jpeg");
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:flex-end;
+justify-content:center;
+
+box-shadow:0 10px 30px rgba(0,0,0,.4);
+
 }
 
-.hero img{
-max-width:420px;
-width:90%;
-margin-bottom:20px;
-filter:drop-shadow(0 0 10px rgba(255,255,255,.25));
-}
+.hero-title{
 
-.subtitle{
-color:#d7d8ff;
-font-size:18px;
+background:rgba(0,0,0,.45);
+padding:14px 30px;
+border-radius:10px;
+margin-bottom:25px;
+backdrop-filter:blur(6px);
+
+font-size:20px;
+
 }
 
 /* container */
@@ -46,181 +58,162 @@ font-size:18px;
 .container{
 max-width:1000px;
 margin:auto;
-padding:30px 20px 80px;
+padding:50px 20px 80px;
+}
+
+/* intro */
+
+.intro{
+text-align:center;
+margin-bottom:50px;
+color:#ddd;
 }
 
 /* song list */
 
-.song-list{
-backdrop-filter:blur(10px);
-background:rgba(255,255,255,0.08);
-padding:30px;
-border-radius:18px;
-margin-bottom:60px;
-box-shadow:0 10px 30px rgba(0,0,0,.3);
-}
-
-.song-list h2{
-margin-top:0;
-}
-
 .song-grid{
+
 display:grid;
-grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
-gap:12px;
-}
+grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+gap:18px;
 
-.song-grid a{
-background:rgba(255,255,255,0.12);
-padding:12px;
-border-radius:10px;
-text-decoration:none;
-color:white;
-transition:.25s;
 }
-
-.song-grid a:hover{
-background:rgba(255,255,255,0.25);
-transform:translateY(-3px);
-}
-
-/* cards */
 
 .song-card{
+
 background:rgba(255,255,255,0.08);
 backdrop-filter:blur(10px);
-padding:30px;
-border-radius:18px;
-margin-bottom:45px;
-box-shadow:0 15px 40px rgba(0,0,0,.3);
 
-opacity:0;
-transform:translateY(30px);
-animation:fadeUp .8s forwards;
+padding:20px;
+border-radius:16px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+
+transition:.25s;
+
+}
+
+.song-card:hover{
+
+transform:translateY(-6px);
+
+background:rgba(255,255,255,0.16);
+
 }
 
 .song-title{
-font-size:22px;
+
 font-weight:bold;
-margin-bottom:10px;
+font-size:18px;
+
 }
 
 iframe{
+
 width:100%;
-height:315px;
+height:180px;
+margin-top:10px;
 border:none;
-margin-top:15px;
 border-radius:10px;
+
 }
 
 .comment{
-background:rgba(255,255,255,0.12);
-padding:18px;
-border-radius:10px;
-margin-top:18px;
-color:#e7e8ff;
-}
 
-.back{
-text-align:right;
 margin-top:12px;
-}
 
-.back a{
-color:#c6c7ff;
-text-decoration:none;
+background:rgba(255,255,255,0.12);
+
+padding:12px;
+border-radius:8px;
+
 font-size:14px;
-}
 
-.back a:hover{
-text-decoration:underline;
-}
-
-@keyframes fadeUp{
-
-to{
-opacity:1;
-transform:none;
-}
+color:#eee;
 
 }
 
 /* footer */
 
 .footer{
+
 text-align:center;
+margin-top:60px;
 color:#aaa;
-padding:40px;
 font-size:14px;
+
 }
 
 </style>
 </head>
 
-<body id="top">
+<body>
 
 <div class="hero">
 
-<img src="logo.png">
-
-<div class="subtitle">
-健啓Webオンリー<br>
-イメージソング企画
+<div class="hero-title">
+健啓Webオンリー イメージソング企画
 </div>
 
 </div>
+
 
 
 <div class="container">
 
+<div class="intro">
 
-<div class="song-list">
+応募いただいたイメージソングを公開しています。<br>
+素敵な楽曲をご応募いただきありがとうございました。
 
-<h2>🎧 曲一覧</h2>
+</div>
+
+
 
 <div class="song-grid">
 
-<a href="#s1">01 曲名</a>
-<a href="#s2">02 曲名</a>
-<a href="#s3">03 曲名</a>
-<a href="#s4">04 曲名</a>
-<a href="#s5">05 曲名</a>
-<a href="#s6">06 曲名</a>
-<a href="#s7">07 曲名</a>
-<a href="#s8">08 曲名</a>
-<a href="#s9">09 曲名</a>
-<a href="#s10">10 曲名</a>
+<div class="song-card">
 
+<div class="song-title">
+01 曲名
 </div>
-
-</div>
-
-
-
-<div class="song-card" id="s1">
-
-<div class="song-title">01 曲名</div>
 
 <iframe src="https://www.youtube.com/embed/動画ID"></iframe>
 
 <div class="comment">
 
-💬 募集コメント  
-ここにコメントを書きます。
+💬 コメント  
+ここに募集コメント
 
-</div>
-
-<div class="back">
-<a href="#top">↑一覧へ戻る</a>
 </div>
 
 </div>
 
 
 
-<div class="song-card" id="s2">
+<div class="song-card">
 
-<div class="song-title">02 曲名</div>
+<div class="song-title">
+02 曲名
+</div>
+
+<iframe src="https://www.youtube.com/embed/動画ID"></iframe>
+
+<div class="comment">
+
+💬 コメント
+
+</div>
+
+</div>
+
+
+
+<div class="song-card">
+
+<div class="song-title">
+03 曲名
+</div>
 
 <iframe src="https://www.youtube.com/embed/動画ID"></iframe>
 
@@ -236,9 +229,13 @@ font-size:14px;
 
 </div>
 
+
 <div class="footer">
 
 健啓Webオンリー企画
+
+</div>
+
 
 </div>
 
