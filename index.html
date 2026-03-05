@@ -13,44 +13,51 @@ scroll-behavior:smooth;
 body{
 margin:0;
 font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-background:#0f0f14;
-color:#eee;
+color:white;
 line-height:1.7;
+
+background:
+radial-gradient(circle at 20% 20%,#2a2d55 0%,transparent 40%),
+radial-gradient(circle at 80% 30%,#3c4a8c 0%,transparent 40%),
+linear-gradient(#0b0c1a,#111432 70%);
 }
 
 /* hero */
 
 .hero{
 text-align:center;
-padding:60px 20px 40px;
+padding:80px 20px 40px;
 }
 
 .hero img{
 max-width:420px;
 width:90%;
 margin-bottom:20px;
+filter:drop-shadow(0 0 10px rgba(255,255,255,.25));
 }
 
 .subtitle{
-color:#bbb;
+color:#d7d8ff;
 font-size:18px;
 }
 
 /* container */
 
 .container{
-max-width:900px;
+max-width:1000px;
 margin:auto;
-padding:30px 20px 60px;
+padding:30px 20px 80px;
 }
 
 /* song list */
 
 .song-list{
-background:#181820;
-padding:25px;
-border-radius:14px;
-margin-bottom:50px;
+backdrop-filter:blur(10px);
+background:rgba(255,255,255,0.08);
+padding:30px;
+border-radius:18px;
+margin-bottom:60px;
+box-shadow:0 10px 30px rgba(0,0,0,.3);
 }
 
 .song-list h2{
@@ -59,65 +66,74 @@ margin-top:0;
 
 .song-grid{
 display:grid;
-grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
-gap:10px;
+grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+gap:12px;
 }
 
 .song-grid a{
-background:#22222c;
-padding:10px;
-border-radius:8px;
+background:rgba(255,255,255,0.12);
+padding:12px;
+border-radius:10px;
 text-decoration:none;
-color:#eee;
-transition:.2s;
+color:white;
+transition:.25s;
 }
 
 .song-grid a:hover{
-background:#35354a;
-transform:translateY(-2px);
+background:rgba(255,255,255,0.25);
+transform:translateY(-3px);
 }
 
 /* cards */
 
 .song-card{
-background:#181820;
-padding:25px;
-border-radius:14px;
-margin-bottom:40px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+padding:30px;
+border-radius:18px;
+margin-bottom:45px;
+box-shadow:0 15px 40px rgba(0,0,0,.3);
+
 opacity:0;
-transform:translateY(20px);
-animation:fadeUp .6s forwards;
+transform:translateY(30px);
+animation:fadeUp .8s forwards;
 }
 
 .song-title{
-font-size:20px;
+font-size:22px;
 font-weight:bold;
-}
-
-.comment{
-background:#22222c;
-padding:15px;
-border-radius:8px;
-margin-top:15px;
-color:#ddd;
+margin-bottom:10px;
 }
 
 iframe{
 width:100%;
 height:315px;
-margin-top:15px;
 border:none;
+margin-top:15px;
+border-radius:10px;
+}
+
+.comment{
+background:rgba(255,255,255,0.12);
+padding:18px;
+border-radius:10px;
+margin-top:18px;
+color:#e7e8ff;
 }
 
 .back{
 text-align:right;
-margin-top:10px;
+margin-top:12px;
 }
 
 .back a{
-color:#aaa;
+color:#c6c7ff;
 text-decoration:none;
 font-size:14px;
+}
+
+.back a:hover{
+text-decoration:underline;
 }
 
 @keyframes fadeUp{
@@ -129,9 +145,17 @@ transform:none;
 
 }
 
+/* footer */
+
+.footer{
+text-align:center;
+color:#aaa;
+padding:40px;
+font-size:14px;
+}
+
 </style>
 </head>
-
 
 <body id="top">
 
@@ -141,13 +165,14 @@ transform:none;
 
 <div class="subtitle">
 健啓Webオンリー<br>
-イメージソング企画 発表
+イメージソング企画
 </div>
 
 </div>
 
 
 <div class="container">
+
 
 <div class="song-list">
 
@@ -180,8 +205,8 @@ transform:none;
 
 <div class="comment">
 
-💬 コメント  
-ここに募集コメントを掲載
+💬 募集コメント  
+ここにコメントを書きます。
 
 </div>
 
@@ -200,24 +225,20 @@ transform:none;
 <iframe src="https://www.youtube.com/embed/動画ID"></iframe>
 
 <div class="comment">
+
 💬 コメント
-</div>
 
-</div>
-
-
-<div class="song-card" id="s3">
-
-<div class="song-title">03 曲名</div>
-
-<iframe src="https://www.youtube.com/embed/動画ID"></iframe>
-
-<div class="comment">
-💬 コメント
 </div>
 
 </div>
 
+
+
+</div>
+
+<div class="footer">
+
+健啓Webオンリー企画
 
 </div>
 
